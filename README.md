@@ -1,6 +1,7 @@
 # Fresh Project with Supabase Authentication
 
-A modern web application built with Deno Fresh and Supabase, featuring comprehensive authentication and user management.
+A modern web application built with Deno Fresh and Supabase, featuring
+comprehensive authentication and user management.
 
 ## Features
 
@@ -39,6 +40,7 @@ A modern web application built with Deno Fresh and Supabase, featuring comprehen
 ### 2. Database Setup
 
 Run the SQL commands in `DATABASE_SETUP.md` to:
+
 - Create the `user_profiles` table
 - Set up Row Level Security policies
 - Create triggers for automatic profile creation
@@ -57,14 +59,17 @@ SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
 ### 4. Enable Authentication Providers
 
 #### Email Authentication
+
 1. Go to Authentication > Providers in Supabase
 2. Enable Email provider
 3. Configure email templates (optional)
 
 #### Google OAuth
+
 1. Go to Authentication > Providers
 2. Enable Google provider
-3. Create OAuth credentials at [Google Cloud Console](https://console.cloud.google.com):
+3. Create OAuth credentials at
+   [Google Cloud Console](https://console.cloud.google.com):
    - Create a new project or select existing
    - Enable Google+ API
    - Go to Credentials > Create Credentials > OAuth 2.0 Client ID
@@ -76,6 +81,7 @@ SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
 ### 5. Configure Redirect URLs
 
 In Supabase Authentication > URL Configuration:
+
 - Site URL: `http://localhost:8000` (development) or your production URL
 - Redirect URLs:
   - `http://localhost:8000/**`
@@ -154,11 +160,13 @@ fresh-project/
 ## User Roles
 
 ### Regular User
+
 - Can view and edit their own profile
 - Access to standard features
 - Cannot manage other users
 
 ### Superadmin
+
 - All regular user capabilities
 - Can view all users
 - Can change user roles
@@ -194,7 +202,8 @@ WHERE email = 'your-email@example.com';
 
 ### Role-Based Access Control
 
-- Implemented via middleware in `routes/_middleware.ts` and `routes/admin/_middleware.ts`
+- Implemented via middleware in `routes/_middleware.ts` and
+  `routes/admin/_middleware.ts`
 - Superadmin-only routes are protected by checking user role
 - Regular users receive 403 Forbidden when accessing admin routes
 
@@ -209,32 +218,39 @@ WHERE email = 'your-email@example.com';
 ## API Endpoints
 
 ### Authentication
+
 - `POST /api/auth/session` - Set authentication session
 - `POST /api/auth/logout` - Clear session and logout
 
 ### Profile Management
+
 - `POST /api/profile/update` - Update user profile
 
 ### Admin (Superadmin only)
+
 - `POST /api/admin/update-role` - Change user role
 
 ## Troubleshooting
 
 ### "Missing Supabase environment variables" error
+
 - Ensure `.env` file exists with correct values
 - Restart the development server
 
 ### Google OAuth not working
+
 - Check redirect URIs in Google Cloud Console
 - Verify Google provider is enabled in Supabase
 - Ensure Site URL is configured correctly
 
 ### Users can't sign up
+
 - Check Supabase dashboard for email confirmations
 - Verify email provider is enabled
 - Check database trigger is working
 
 ### Profile not created after signup
+
 - Verify the `handle_new_user()` function exists
 - Check the trigger `on_auth_user_created` is enabled
 - Look for errors in Supabase logs
@@ -248,10 +264,12 @@ WHERE email = 'your-email@example.com';
 
 ## Tech Stack
 
-- **Framework**: [Fresh](https://fresh.deno.dev/) - Modern web framework for Deno
+- **Framework**: [Fresh](https://fresh.deno.dev/) - Modern web framework for
+  Deno
 - **Runtime**: [Deno](https://deno.land/) - Secure TypeScript runtime
 - **UI**: Preact + Signals
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/) + [DaisyUI](https://daisyui.com/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) +
+  [DaisyUI](https://daisyui.com/)
 - **Authentication**: [Supabase Auth](https://supabase.com/auth)
 - **Database**: PostgreSQL via Supabase
 
@@ -262,6 +280,7 @@ MIT
 ## Support
 
 For issues and questions:
+
 - Check `DATABASE_SETUP.md` for database configuration
 - Review Supabase documentation
 - Check Fresh documentation at https://fresh.deno.dev

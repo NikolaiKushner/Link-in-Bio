@@ -2,12 +2,15 @@
 
 ## Summary
 
-Refactored all authentication pages to use **Fresh Islands** instead of `dangerouslySetInnerHTML`, following Fresh best practices and improving security.
+Refactored all authentication pages to use **Fresh Islands** instead of
+`dangerouslySetInnerHTML`, following Fresh best practices and improving
+security.
 
 ## Why This Change?
 
 1. **Security**: `dangerouslySetInnerHTML` can lead to XSS vulnerabilities
-2. **Fresh Philosophy**: Islands are the proper way to handle client-side interactivity in Fresh
+2. **Fresh Philosophy**: Islands are the proper way to handle client-side
+   interactivity in Fresh
 3. **Type Safety**: Islands provide full TypeScript support
 4. **Better DX**: Easier to test, maintain, and debug
 
@@ -53,6 +56,7 @@ Refactored all authentication pages to use **Fresh Islands** instead of `dangero
 ## Technical Details
 
 ### Before (Unsafe)
+
 ```tsx
 <script
   type="module"
@@ -62,42 +66,50 @@ Refactored all authentication pages to use **Fresh Islands** instead of `dangero
       // ... inline JavaScript code
     `,
   }}
-/>
+/>;
 ```
 
 ### After (Safe)
+
 ```tsx
 import LoginForm from "../islands/LoginForm.tsx";
 
 export default define.page(function Login(ctx) {
   const config = getSupabaseConfig();
-  return <LoginForm supabaseUrl={config.url} supabaseAnonKey={config.anonKey} />;
+  return (
+    <LoginForm supabaseUrl={config.url} supabaseAnonKey={config.anonKey} />
+  );
 });
 ```
 
 ## Benefits
 
 ### 🔒 Security
+
 - No inline script injection risks
 - Proper escaping of user data
 - CSP-friendly (Content Security Policy)
 
 ### 🎯 Type Safety
+
 - Full TypeScript checking
 - Compile-time error detection
 - Better IDE autocomplete
 
 ### ⚡ Performance
+
 - Code splitting (islands load only when needed)
 - Better caching
 - Smaller initial bundle
 
 ### 🧪 Testability
+
 - Islands can be tested in isolation
 - Easier to mock dependencies
 - Better separation of concerns
 
 ### 🛠️ Maintainability
+
 - Single source of truth for logic
 - Easier refactoring
 - Better code organization
@@ -127,6 +139,7 @@ If you need to add more interactive forms:
 4. **Handle events** with proper TypeScript typing
 
 Example:
+
 ```tsx
 // islands/MyForm.tsx
 import { useSignal } from "@preact/signals";

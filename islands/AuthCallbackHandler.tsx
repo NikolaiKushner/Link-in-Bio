@@ -7,7 +7,9 @@ interface AuthCallbackHandlerProps {
   supabaseAnonKey: string;
 }
 
-export default function AuthCallbackHandler({ supabaseUrl, supabaseAnonKey }: AuthCallbackHandlerProps) {
+export default function AuthCallbackHandler(
+  { supabaseUrl, supabaseAnonKey }: AuthCallbackHandlerProps,
+) {
   const status = useSignal("Authenticating...");
   const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
@@ -41,7 +43,8 @@ export default function AuthCallbackHandler({ supabaseUrl, supabaseAnonKey }: Au
         }
       } catch (error) {
         console.error("Auth callback error:", error);
-        window.location.href = "/login?error=" + encodeURIComponent(error.message);
+        window.location.href = "/login?error=" +
+          encodeURIComponent(error.message);
       }
     };
 
@@ -50,7 +53,8 @@ export default function AuthCallbackHandler({ supabaseUrl, supabaseAnonKey }: Au
 
   return (
     <div class="text-center">
-      <div class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600 mb-4"></div>
+      <div class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600 mb-4">
+      </div>
       <h1 class="text-2xl font-bold text-gray-900">{status.value}</h1>
       <p class="text-gray-600 mt-2">
         Please wait while we complete your sign in

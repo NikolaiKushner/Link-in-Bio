@@ -8,7 +8,9 @@ interface RegisterFormProps {
   supabaseAnonKey: string;
 }
 
-export default function RegisterForm({ supabaseUrl, supabaseAnonKey }: RegisterFormProps) {
+export default function RegisterForm(
+  { supabaseUrl, supabaseAnonKey }: RegisterFormProps,
+) {
   const email = useSignal("");
   const password = useSignal("");
   const fullName = useSignal("");
@@ -150,57 +152,63 @@ export default function RegisterForm({ supabaseUrl, supabaseAnonKey }: RegisterF
           </div>
         </div>
 
-      <form onSubmit={handleSubmit} class="space-y-4">
-        <Input
-          label="Full Name"
-          type="text"
-          id="fullName"
-          value={fullName.value}
-          onInput={(e) => (fullName.value = (e.target as HTMLInputElement).value)}
-          placeholder="John Doe"
-          fullWidth
-          variant="filled"
-          size="md"
-        />
+        <form onSubmit={handleSubmit} class="space-y-4">
+          <Input
+            label="Full Name"
+            type="text"
+            id="fullName"
+            value={fullName.value}
+            onInput={(
+              e,
+            ) => (fullName.value = (e.target as HTMLInputElement).value)}
+            placeholder="John Doe"
+            fullWidth
+            variant="filled"
+            size="md"
+          />
 
-        <Input
-          label="Email"
-          type="email"
-          id="email"
-          required
-          value={email.value}
-          onInput={(e) => (email.value = (e.target as HTMLInputElement).value)}
-          placeholder="name@email.com"
-          fullWidth
-          variant="filled"
-          size="md"
-        />
+          <Input
+            label="Email"
+            type="email"
+            id="email"
+            required
+            value={email.value}
+            onInput={(
+              e,
+            ) => (email.value = (e.target as HTMLInputElement).value)}
+            placeholder="name@email.com"
+            fullWidth
+            variant="filled"
+            size="md"
+          />
 
-        <Input
-          label="Password"
-          type="password"
-          id="password"
-          required
-          minLength={6}
-          value={password.value}
-          onInput={(e) => (password.value = (e.target as HTMLInputElement).value)}
-          placeholder="Create a password (min. 6 characters)"
-          fullWidth
-          variant="filled"
-          size="md"
-        />
+          <Input
+            label="Password"
+            type="password"
+            id="password"
+            required
+            minLength={6}
+            value={password.value}
+            onInput={(
+              e,
+            ) => (password.value = (e.target as HTMLInputElement).value)}
+            placeholder="Create a password (min. 6 characters)"
+            fullWidth
+            variant="filled"
+            size="md"
+          />
 
-        <Button
-          type="submit"
-          variant="primary"
-          size="md"
-          fullWidth
-          loading={loading.value}
-          class="mt-6"
-        >
-          {loading.value ? "Creating account..." : "Continue with email"}
-        </Button>
-      </form>
+          <Button
+            type="submit"
+            variant="primary"
+            size="md"
+            fullWidth
+            loading={loading.value}
+            class="mt-6"
+          >
+            {loading.value ? "Creating account..." : "Continue with email"}
+          </Button>
+        </form>
       </div>
 
       <p class="text-center text-sm text-gray-600 mt-8">

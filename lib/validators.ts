@@ -9,32 +9,32 @@ export interface EmailValidationResult {
 // Common email domain typos
 const COMMON_DOMAIN_TYPOS: Record<string, string> = {
   // ProtonMail
-  'protom.me': 'proton.me',
-  'protonmai.com': 'protonmail.com',
-  'proton.com': 'protonmail.com',
+  "protom.me": "proton.me",
+  "protonmai.com": "protonmail.com",
+  "proton.com": "protonmail.com",
 
   // Gmail
-  'gmai.com': 'gmail.com',
-  'gmial.com': 'gmail.com',
-  'gmil.com': 'gmail.com',
-  'gnail.com': 'gmail.com',
-  'gamil.com': 'gmail.com',
+  "gmai.com": "gmail.com",
+  "gmial.com": "gmail.com",
+  "gmil.com": "gmail.com",
+  "gnail.com": "gmail.com",
+  "gamil.com": "gmail.com",
 
   // Yahoo
-  'yahooo.com': 'yahoo.com',
-  'yaho.com': 'yahoo.com',
-  'yhoo.com': 'yahoo.com',
+  "yahooo.com": "yahoo.com",
+  "yaho.com": "yahoo.com",
+  "yhoo.com": "yahoo.com",
 
   // Outlook/Hotmail
-  'outlok.com': 'outlook.com',
-  'outloo.com': 'outlook.com',
-  'hotmial.com': 'hotmail.com',
-  'hotmali.com': 'hotmail.com',
+  "outlok.com": "outlook.com",
+  "outloo.com": "outlook.com",
+  "hotmial.com": "hotmail.com",
+  "hotmali.com": "hotmail.com",
 
   // Other common providers
-  'iclou.com': 'icloud.com',
-  'icoud.com': 'icloud.com',
-  'aol.con': 'aol.com',
+  "iclou.com": "icloud.com",
+  "icoud.com": "icloud.com",
+  "aol.con": "aol.com",
 };
 
 /**
@@ -59,10 +59,12 @@ export function validateEmail(email: string): EmailValidationResult {
   }
 
   // Check for common typos
-  const [localPart, domain] = email.split('@');
+  const [localPart, domain] = email.split("@");
 
   if (COMMON_DOMAIN_TYPOS[domain?.toLowerCase()]) {
-    const suggestion = `${localPart}@${COMMON_DOMAIN_TYPOS[domain.toLowerCase()]}`;
+    const suggestion = `${localPart}@${
+      COMMON_DOMAIN_TYPOS[domain.toLowerCase()]
+    }`;
     return {
       isValid: false,
       suggestion,
@@ -71,7 +73,7 @@ export function validateEmail(email: string): EmailValidationResult {
   }
 
   // Check for spaces
-  if (email.includes(' ')) {
+  if (email.includes(" ")) {
     return {
       isValid: false,
       error: "Email cannot contain spaces",
@@ -79,7 +81,7 @@ export function validateEmail(email: string): EmailValidationResult {
   }
 
   // Check for consecutive dots
-  if (email.includes('..')) {
+  if (email.includes("..")) {
     return {
       isValid: false,
       error: "Email cannot contain consecutive dots",
@@ -87,8 +89,11 @@ export function validateEmail(email: string): EmailValidationResult {
   }
 
   // Check domain has valid TLD
-  const domainParts = domain?.split('.');
-  if (!domainParts || domainParts.length < 2 || domainParts[domainParts.length - 1].length < 2) {
+  const domainParts = domain?.split(".");
+  if (
+    !domainParts || domainParts.length < 2 ||
+    domainParts[domainParts.length - 1].length < 2
+  ) {
     return {
       isValid: false,
       error: "Invalid email domain",
@@ -107,7 +112,10 @@ export interface PasswordValidationResult {
   strength: "weak" | "medium" | "strong";
 }
 
-export function validatePassword(password: string, minLength = 6): PasswordValidationResult {
+export function validatePassword(
+  password: string,
+  minLength = 6,
+): PasswordValidationResult {
   const errors: string[] = [];
   let strength: "weak" | "medium" | "strong" = "weak";
 
@@ -129,7 +137,9 @@ export function validatePassword(password: string, minLength = 6): PasswordValid
   const hasNumbers = /\d/.test(password);
   const hasSpecialChars = /[!@#$%^&*(),.?":{}|<>]/.test(password);
 
-  const strengthScore = [hasLowerCase, hasUpperCase, hasNumbers, hasSpecialChars].filter(Boolean).length;
+  const strengthScore =
+    [hasLowerCase, hasUpperCase, hasNumbers, hasSpecialChars].filter(Boolean)
+      .length;
 
   if (password.length >= 8 && strengthScore >= 3) {
     strength = "strong";

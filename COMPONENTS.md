@@ -1,6 +1,7 @@
 # UI Components
 
-Reusable UI components for the Fresh project with consistent styling and TypeScript support.
+Reusable UI components for the Fresh project with consistent styling and
+TypeScript support.
 
 ## Components
 
@@ -33,6 +34,7 @@ import Button from "@/components/Button.tsx";
 ```
 
 **Props:**
+
 - `variant`: "primary" | "secondary" | "outline" | "ghost" | "danger"
 - `size`: "sm" | "md" | "lg"
 - `fullWidth`: boolean
@@ -75,6 +77,7 @@ import Input from "@/components/Input.tsx";
 ```
 
 **Props:**
+
 - `label`: string
 - `error`: string
 - `helperText`: string
@@ -107,6 +110,7 @@ import Textarea from "@/components/Textarea.tsx";
 ```
 
 **Props:**
+
 - `label`: string
 - `error`: string
 - `helperText`: string
@@ -129,6 +133,7 @@ import Label from "@/components/Label.tsx";
 ```
 
 **Props:**
+
 - `required`: boolean
 - All standard label HTML attributes
 
@@ -156,6 +161,7 @@ import Checkbox from "@/components/Checkbox.tsx";
 ```
 
 **Props:**
+
 - `label`: string
 - `error`: string
 - All standard checkbox input HTML attributes (except `type`)
@@ -192,6 +198,7 @@ import Select from "@/components/Select.tsx";
 ```
 
 **Props:**
+
 - `label`: string
 - `error`: string
 - `helperText`: string
@@ -208,7 +215,7 @@ import Select from "@/components/Select.tsx";
 ### Login Form
 
 ```tsx
-import { Button, Input, Checkbox } from "@/components/index.ts";
+import { Button, Checkbox, Input } from "@/components/index.ts";
 
 <form>
   <Input
@@ -232,7 +239,7 @@ import { Button, Input, Checkbox } from "@/components/index.ts";
   <Button fullWidth variant="primary">
     Sign In
   </Button>
-</form>
+</form>;
 ```
 
 ### Profile Form
@@ -279,7 +286,7 @@ import { Button, Input, Select, Textarea } from "@/components/index.ts";
       Save Changes
     </Button>
   </div>
-</form>
+</form>;
 ```
 
 ### Button Variants
@@ -304,6 +311,7 @@ import { Button } from "@/components/index.ts";
 ## Styling
 
 All components use Tailwind CSS classes and follow your design system:
+
 - **Primary color**: Gray 900 (black)
 - **Border radius**: `rounded-xl` (extra large)
 - **Focus rings**: 2px ring on focus
@@ -327,6 +335,7 @@ You can override styles by passing `className`:
 ## Accessibility
 
 All components include:
+
 - Proper ARIA labels
 - Focus states with visible rings
 - Disabled states
@@ -351,6 +360,7 @@ interface ButtonProps extends JSX.HTMLAttributes<HTMLButtonElement> {
 ```
 
 This provides:
+
 - Full autocomplete in your IDE
 - Type checking
 - Better developer experience
@@ -372,6 +382,7 @@ This provides:
 ## Future Enhancements
 
 Potential additions:
+
 - Radio button component
 - Switch/toggle component
 - File upload component

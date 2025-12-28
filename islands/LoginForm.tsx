@@ -1,14 +1,16 @@
 import { useSignal } from "@preact/signals";
 import { createClient } from "@supabase/supabase-js";
 import { validateEmail } from "../lib/validators.ts";
-import { Button, Input, Checkbox } from "../components/ui/index.ts";
+import { Button, Checkbox, Input } from "../components/ui/index.ts";
 
 interface LoginFormProps {
   supabaseUrl: string;
   supabaseAnonKey: string;
 }
 
-export default function LoginForm({ supabaseUrl, supabaseAnonKey }: LoginFormProps) {
+export default function LoginForm(
+  { supabaseUrl, supabaseAnonKey }: LoginFormProps,
+) {
   const email = useSignal("");
   const password = useSignal("");
   const error = useSignal("");
@@ -30,10 +32,11 @@ export default function LoginForm({ supabaseUrl, supabaseAnonKey }: LoginFormPro
     }
 
     try {
-      const { data, error: signInError } = await supabase.auth.signInWithPassword({
-        email: email.value,
-        password: password.value,
-      });
+      const { data, error: signInError } = await supabase.auth
+        .signInWithPassword({
+          email: email.value,
+          password: password.value,
+        });
 
       if (signInError) throw signInError;
 
@@ -137,7 +140,9 @@ export default function LoginForm({ supabaseUrl, supabaseAnonKey }: LoginFormPro
             id="email"
             required
             value={email.value}
-            onInput={(e) => (email.value = (e.target as HTMLInputElement).value)}
+            onInput={(
+              e,
+            ) => (email.value = (e.target as HTMLInputElement).value)}
             placeholder="name@email.com"
             fullWidth
             variant="filled"
@@ -150,7 +155,9 @@ export default function LoginForm({ supabaseUrl, supabaseAnonKey }: LoginFormPro
             required
             minLength={6}
             value={password.value}
-            onInput={(e) => (password.value = (e.target as HTMLInputElement).value)}
+            onInput={(
+              e,
+            ) => (password.value = (e.target as HTMLInputElement).value)}
             placeholder="Create a password (min. 6 characters)"
             fullWidth
             variant="filled"
@@ -171,7 +178,10 @@ export default function LoginForm({ supabaseUrl, supabaseAnonKey }: LoginFormPro
             </div>
 
             <div class="text-sm">
-              <a href="/forgot-password" class="text-gray-900 hover:text-gray-700 font-medium">
+              <a
+                href="/forgot-password"
+                class="text-gray-900 hover:text-gray-700 font-medium"
+              >
                 Forgot password?
               </a>
             </div>
@@ -192,7 +202,10 @@ export default function LoginForm({ supabaseUrl, supabaseAnonKey }: LoginFormPro
 
       <p class="text-center text-sm text-gray-600 mt-8">
         Don't have an account?{" "}
-        <a href="/register" class="text-gray-900 hover:text-gray-700 font-medium">
+        <a
+          href="/register"
+          class="text-gray-900 hover:text-gray-700 font-medium"
+        >
           Sign up
         </a>
       </p>

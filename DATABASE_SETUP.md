@@ -17,7 +17,8 @@ SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
 
 ## Database Schema
 
-Run the following SQL in your Supabase SQL editor to create the necessary tables and functions:
+Run the following SQL in your Supabase SQL editor to create the necessary tables
+and functions:
 
 ```sql
 -- Create user_role enum
@@ -150,6 +151,7 @@ CREATE TRIGGER update_user_profiles_updated_at
 ## Testing
 
 After setup:
+
 1. Try registering a new user via email
 2. Check that user_profiles table has a new entry
 3. Try logging in with Google
@@ -159,4 +161,5 @@ After setup:
 
 - The first user to sign up will be a regular user
 - You must manually promote the first user to superadmin via SQL
-- After that, superadmins can promote other users through the application (if you implement that feature)
+- After that, superadmins can promote other users through the application (if
+  you implement that feature)

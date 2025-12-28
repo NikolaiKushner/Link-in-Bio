@@ -13,11 +13,17 @@ interface UserManagementTableProps {
   users: UserProfile[];
 }
 
-export default function UserManagementTable({ users }: UserManagementTableProps) {
+export default function UserManagementTable(
+  { users }: UserManagementTableProps,
+) {
   const error = useSignal("");
 
   const handleRoleUpdate = async (userId: string, newRole: string) => {
-    if (!confirm(`Are you sure you want to change this user's role to ${newRole}?`)) {
+    if (
+      !confirm(
+        `Are you sure you want to change this user's role to ${newRole}?`,
+      )
+    ) {
       return;
     }
 
@@ -149,10 +155,10 @@ function UserRow({ user, onRoleUpdate }: UserRowProps) {
         <form onSubmit={handleSubmit} class="flex items-center gap-2">
           <Select
             value={selectedRole.value}
-            onChange={(e) =>
-              (selectedRole.value = (e.target as HTMLSelectElement)
-                .value as "regular" | "superadmin")
-            }
+            onChange={(
+              e,
+            ) => (selectedRole.value = (e.target as HTMLSelectElement)
+              .value as "regular" | "superadmin")}
             options={[
               { value: "regular", label: "Regular" },
               { value: "superadmin", label: "Superadmin" },

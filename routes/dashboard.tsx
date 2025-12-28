@@ -167,7 +167,8 @@ export default define.page(async function Dashboard(ctx) {
             </h2>
             <p class="text-gray-600">
               This is your personal dashboard. Here you can manage your account,
-              view your activity, and access various features of the application.
+              view your activity, and access various features of the
+              application.
             </p>
             {isAdmin && (
               <div class="mt-4 p-4 bg-purple-50 border border-purple-200 rounded-lg">

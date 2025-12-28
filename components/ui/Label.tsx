@@ -13,7 +13,8 @@ export default function Label({
   children,
   ...props
 }: LabelProps) {
-  const baseStyles = "block text-sm font-medium text-gray-700 mb-2 uppercase tracking-wide";
+  const baseStyles =
+    "block text-sm font-medium text-gray-700 mb-2 uppercase tracking-wide";
   const combinedClassName = `${baseStyles} ${className}`.trim();
 
   return (

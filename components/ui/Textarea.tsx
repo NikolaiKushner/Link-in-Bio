@@ -21,23 +21,26 @@ export default function Textarea({
   ...props
 }: TextareaProps) {
   // Generate a unique ID if not provided
-  const textareaId = id || `textarea-${Math.random().toString(36).substr(2, 9)}`;
+  const textareaId = id ||
+    `textarea-${Math.random().toString(36).substr(2, 9)}`;
 
   // Base styles
-  const baseStyles = "transition-all duration-200 focus:outline-none resize-none";
+  const baseStyles =
+    "transition-all duration-200 focus:outline-none resize-none";
 
   // Variant styles
-  const variantStyles = "border-0 bg-gray-50 focus:ring-2 focus:ring-gray-900 px-4 py-3 rounded-xl";
+  const variantStyles =
+    "border-0 bg-gray-50 focus:ring-2 focus:ring-gray-900 px-4 py-3 rounded-xl";
 
   // Error styles
-  const errorStyles = error
-    ? "border-red-500 focus:ring-red-500"
-    : "";
+  const errorStyles = error ? "border-red-500 focus:ring-red-500" : "";
 
   // Width styles
   const widthStyles = fullWidth ? "w-full" : "";
 
-  const combinedClassName = `${baseStyles} ${variantStyles} ${errorStyles} ${widthStyles} ${className}`.trim();
+  const combinedClassName =
+    `${baseStyles} ${variantStyles} ${errorStyles} ${widthStyles} ${className}`
+      .trim();
 
   return (
     <div class={fullWidth ? "w-full" : ""}>
@@ -59,9 +62,7 @@ export default function Textarea({
         className={combinedClassName}
       />
 
-      {error && (
-        <p class="mt-1 text-sm text-red-600">{error}</p>
-      )}
+      {error && <p class="mt-1 text-sm text-red-600">{error}</p>}
 
       {helperText && !error && (
         <p class="mt-1 text-sm text-gray-500">{helperText}</p>

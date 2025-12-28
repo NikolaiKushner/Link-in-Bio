@@ -31,7 +31,8 @@ export default function Input({
 
   // Variant styles
   const variantStyles = {
-    default: "border border-gray-300 bg-white focus:ring-2 focus:ring-gray-900 focus:border-transparent",
+    default:
+      "border border-gray-300 bg-white focus:ring-2 focus:ring-gray-900 focus:border-transparent",
     filled: "border-0 bg-gray-50 focus:ring-2 focus:ring-gray-900",
     outlined: "border-2 border-gray-300 bg-transparent focus:border-gray-900",
   };
@@ -51,7 +52,9 @@ export default function Input({
   // Width styles
   const widthStyles = fullWidth ? "w-full" : "";
 
-  const combinedClassName = `${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${errorStyles} ${widthStyles} ${className}`.trim();
+  const combinedClassName = `${baseStyles} ${variantStyles[variant]} ${
+    sizeStyles[size]
+  } ${errorStyles} ${widthStyles} ${className}`.trim();
 
   return (
     <div class={fullWidth ? "w-full" : ""}>
@@ -72,9 +75,7 @@ export default function Input({
         className={combinedClassName}
       />
 
-      {error && (
-        <p class="mt-1 text-sm text-red-600">{error}</p>
-      )}
+      {error && <p class="mt-1 text-sm text-red-600">{error}</p>}
 
       {helperText && !error && (
         <p class="mt-1 text-sm text-gray-500">{helperText}</p>

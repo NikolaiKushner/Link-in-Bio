@@ -12,7 +12,10 @@ export default define.page(function AuthCallback(ctx) {
         <title>Authenticating...</title>
       </Head>
       <div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center px-4">
-        <AuthCallbackHandler supabaseUrl={config.url} supabaseAnonKey={config.anonKey} />
+        <AuthCallbackHandler
+          supabaseUrl={config.url}
+          supabaseAnonKey={config.anonKey}
+        />
       </div>
     </>
   );

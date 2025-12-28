@@ -8,7 +8,9 @@ interface ProfileFormProps {
   createdAt: string;
 }
 
-export default function ProfileForm({ email, fullName, role, createdAt }: ProfileFormProps) {
+export default function ProfileForm(
+  { email, fullName, role, createdAt }: ProfileFormProps,
+) {
   const name = useSignal(fullName || "");
   const error = useSignal("");
   const success = useSignal("");

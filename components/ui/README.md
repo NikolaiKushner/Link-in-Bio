@@ -3,11 +3,13 @@
 Reusable UI component library for the Fresh project.
 
 ## Location
+
 All UI components are located in `components/ui/`
 
 ## Components
 
-- **Button** - Versatile button with variants (primary, secondary, outline, ghost, danger)
+- **Button** - Versatile button with variants (primary, secondary, outline,
+  ghost, danger)
 - **Input** - Form input with label, error states, and variants
 - **Textarea** - Multi-line text input
 - **Select** - Dropdown select with options
@@ -17,17 +19,20 @@ All UI components are located in `components/ui/`
 ## Usage
 
 ### Import from barrel export:
+
 ```tsx
-import { Button, Input, Checkbox } from "@/components/ui/index.ts";
+import { Button, Checkbox, Input } from "@/components/ui/index.ts";
 ```
 
 ### Or import individually:
+
 ```tsx
 import Button from "@/components/ui/Button.tsx";
 import Input from "@/components/ui/Input.tsx";
 ```
 
 ### Or from root components export:
+
 ```tsx
 import { Button, Input } from "@/components/index.ts";
 ```
@@ -35,8 +40,9 @@ import { Button, Input } from "@/components/index.ts";
 ## Examples
 
 ### Login Form
+
 ```tsx
-import { Button, Input, Checkbox } from "@/components/ui/index.ts";
+import { Button, Checkbox, Input } from "@/components/ui/index.ts";
 
 <form>
   <Input
@@ -59,10 +65,11 @@ import { Button, Input, Checkbox } from "@/components/ui/index.ts";
   <Button variant="primary" fullWidth>
     Sign In
   </Button>
-</form>
+</form>;
 ```
 
 ### Profile Form
+
 ```tsx
 import { Button, Input } from "@/components/ui/index.ts";
 
@@ -86,12 +93,13 @@ import { Button, Input } from "@/components/ui/index.ts";
     <Button variant="primary" fullWidth>Save</Button>
     <Button variant="secondary" fullWidth>Cancel</Button>
   </div>
-</form>
+</form>;
 ```
 
 ## Design System
 
 All components follow a consistent design:
+
 - **Colors**: Gray-900 (primary), with color variants
 - **Border Radius**: `rounded-xl` (0.75rem)
 - **Spacing**: Consistent padding and margins
@@ -102,6 +110,7 @@ All components follow a consistent design:
 ## Component Props
 
 ### Button
+
 - `variant`: "primary" | "secondary" | "outline" | "ghost" | "danger"
 - `size`: "sm" | "md" | "lg"
 - `fullWidth`: boolean
@@ -109,6 +118,7 @@ All components follow a consistent design:
 - All native button props
 
 ### Input
+
 - `label`: string
 - `error`: string (shows error message)
 - `helperText`: string (shows help text)
@@ -118,6 +128,7 @@ All components follow a consistent design:
 - All native input props
 
 ### Select
+
 - `label`: string
 - `error`: string
 - `helperText`: string
@@ -127,16 +138,19 @@ All components follow a consistent design:
 - All native select props
 
 ### Checkbox
+
 - `label`: string
 - `error`: string
 - All native checkbox props (except `type`)
 
 ### Textarea
+
 - Same as Input props
 - `rows`: number (default: 4)
 - All native textarea props
 
 ### Label
+
 - `required`: boolean (shows red asterisk)
 - All native label props
 
@@ -153,6 +167,7 @@ interface ButtonProps extends ButtonElement {
 ```
 
 This provides:
+
 - Full autocomplete
 - Type safety
 - Better DX
@@ -195,7 +210,7 @@ Components use Tailwind CSS utility classes. To customize:
 ```tsx
 <Button className="your-custom-classes">
   Custom Button
-</Button>
+</Button>;
 ```
 
 ## Best Practices
@@ -212,6 +227,7 @@ Components use Tailwind CSS utility classes. To customize:
 ## Used In
 
 These components are used throughout the app:
+
 - ✅ LoginForm island
 - ✅ RegisterForm island
 - ✅ ProfileForm island
@@ -221,4 +237,5 @@ These components are used throughout the app:
 ## Documentation
 
 For full component documentation, see:
+
 - [COMPONENTS.md](../../COMPONENTS.md) - Complete API reference

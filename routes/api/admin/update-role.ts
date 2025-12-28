@@ -1,5 +1,5 @@
 import { define } from "../../../utils.ts";
-import { getSession, isSuperAdmin, getUserProfile } from "../../../lib/auth.ts";
+import { getSession, getUserProfile, isSuperAdmin } from "../../../lib/auth.ts";
 import { createSupabaseClient } from "../../../lib/supabase.ts";
 
 export const handler = define.handlers({
@@ -16,7 +16,10 @@ export const handler = define.handlers({
         );
       }
 
-      const profile = await getUserProfile(session.user.id, session.accessToken);
+      const profile = await getUserProfile(
+        session.user.id,
+        session.accessToken,
+      );
       if (!profile || !isSuperAdmin(profile)) {
         return new Response(
           JSON.stringify({ error: "Forbidden: Superadmin access required" }),
