@@ -1,7 +1,7 @@
 import { useSignal } from "@preact/signals";
 import { createClient } from "@supabase/supabase-js";
 import { validateEmail } from "../lib/validators.ts";
-import { Button, Checkbox, Input } from "../components/ui/index.ts";
+import { Button, Input } from "../components/ui/index.ts";
 
 interface LoginFormProps {
   supabaseUrl: string;
@@ -194,7 +194,6 @@ export default function LoginForm(
               </a>
             </div>
           </div>
-
           <Button
             type="submit"
             variant="primary"

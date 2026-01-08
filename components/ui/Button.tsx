@@ -8,6 +8,7 @@ interface ButtonProps extends ButtonElement {
   size?: "sm" | "md" | "lg";
   fullWidth?: boolean;
   loading?: boolean;
+  disabled?: boolean;
   children: preact.ComponentChildren;
 }
 
@@ -16,7 +17,7 @@ export default function Button({
   size = "md",
   fullWidth = false,
   loading = false,
-  disabled,
+  disabled = false,
   className = "",
   children,
   ...props

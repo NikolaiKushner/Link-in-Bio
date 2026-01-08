@@ -11,6 +11,7 @@ export default define.middleware(async (ctx) => {
     "/register",
     "/auth/callback",
     "/forgot-password",
+    "/reset-password",
     "/api/auth/session",
   ];
 
