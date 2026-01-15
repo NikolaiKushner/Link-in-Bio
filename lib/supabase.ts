@@ -1,8 +1,8 @@
 import { createClient, SupabaseClient } from "@supabase/supabase-js";
 import type { Database } from "./database.types.ts";
 
-const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
-const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY")!;
+const supabaseUrl: string = Deno.env.get("SUPABASE_URL")!;
+const supabaseAnonKey: string = Deno.env.get("SUPABASE_ANON_KEY")!;
 
 if (!supabaseUrl || !supabaseAnonKey) {
   throw new Error(
