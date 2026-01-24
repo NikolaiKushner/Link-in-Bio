@@ -36,7 +36,7 @@ export default define.page(async function Dashboard(ctx) {
   return (
     <>
       <Head>
-        <title>Dashboard - Fresh Project</title>
+        <title>Dashboard - Getlnk</title>
       </Head>
       <div class="min-h-screen bg-gray-50">
         {/* Header */}

@@ -12,7 +12,7 @@ export default define.page(function ResetPassword(ctx) {
   return (
     <>
       <Head>
-        <title>Reset Password - Fresh Project</title>
+        <title>Reset Password - Getlnk</title>
       </Head>
       <div class="min-h-screen bg-gray-50 flex items-center justify-center px-4 py-12">
         <ResetPasswordForm

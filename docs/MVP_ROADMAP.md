@@ -1,4 +1,4 @@
-# LinkHub MVP & Monetization Roadmap
+# Getlnk MVP & Monetization Roadmap
 
 **Project Status:** 🟢 Core MVP Features ~85% Complete
 
@@ -8,7 +8,7 @@
 
 ## Executive Summary
 
-LinkHub is a link-in-bio platform with a solid foundation. The core
+Getlnk is a link-in-bio platform with a solid foundation. The core
 infrastructure (auth, database, links management, public profiles, basic
 analytics) is **already implemented**. This roadmap focuses on:
 
@@ -336,7 +336,7 @@ Regular Links Below
 
 | Tier         | Price  | Features                                                                                                                              |
 | ------------ | ------ | ------------------------------------------------------------------------------------------------------------------------------------- |
-| **Free**     | $0/mo  | • 5 links<br>• Basic themes<br>• Basic analytics<br>• LinkHub branding                                                                |
+| **Free**     | $0/mo  | • 5 links<br>• Basic themes<br>• Basic analytics<br>• Getlnk branding                                                                |
 | **Pro**      | $5/mo  | • Unlimited links<br>• All themes<br>• Advanced analytics<br>• Social icons<br>• No branding<br>• Email support                       |
 | **Business** | $15/mo | • Everything in Pro<br>• Custom domain<br>• Email capture widget<br>• Priority support<br>• Link scheduling<br>• Team access (future) |
 
@@ -525,7 +525,7 @@ export function canAddLink(
 
 **Consider:** Start with CNAME to subdomain (easier than apex domain)
 
-Example: `links.usersite.com` → `linkhub.com/@user`
+Example: `links.usersite.com` → `getlnk.xyz/@user`
 
 ---
 
@@ -750,7 +750,7 @@ ALTER TABLE public_profiles ADD COLUMN org_id UUID REFERENCES organizations(id);
    - Use cases / success stories
 
 2. **Freemium Virality**
-   - Free tier shows "Powered by LinkHub" footer
+   - Free tier shows "Powered by Getlnk" footer
    - Make it easy for viewers to create their own
 
 3. **Affiliate Program**
@@ -1027,7 +1027,7 @@ When evaluating new features, use this framework:
 
 ### Our Positioning
 
-**"The open-source link-in-bio for creators who value ownership"**
+**"The open-source link-in-bio"**
 
 - Open source (build trust, get contributions)
 - Self-hostable (privacy, control)
@@ -1058,9 +1058,9 @@ When evaluating new features, use this framework:
 ## Questions to Answer Before Launch
 
 1. **Branding:**
-   - Is "LinkHub" the final name?
+   - Is "Getlnk" the final name?
    - Is the domain secured?
-   - Is social media handles available (@linkhub)?
+   - Is social media handles available (@getlnk)?
 
 2. **Legal:**
    - Terms of Service written?
@@ -1087,7 +1087,7 @@ When evaluating new features, use this framework:
 
 ## Conclusion
 
-**Bottom Line:** LinkHub has a solid foundation. With 2-3 weeks of focused work,
+**Bottom Line:** Getlnk has a solid foundation. With 2-3 weeks of focused work,
 it can be launch-ready. Another 2-3 weeks of monetization work, and it's
 revenue-generating.
 

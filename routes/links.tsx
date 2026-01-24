@@ -34,7 +34,7 @@ export default define.page(async function LinksPage(ctx) {
   return (
     <>
       <Head>
-        <title>My Links - Link in Bio</title>
+        <title>My Links - Getlnk</title>
       </Head>
       <div class="min-h-screen bg-gray-50">
         {/* Header */}

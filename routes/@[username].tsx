@@ -118,7 +118,7 @@ export default define.page(async function PublicProfilePage(ctx) {
         <meta
           name="description"
           content={profile.bio ||
-            `Check out ${profile.display_name || profile.username}'s links`}
+            `Check out ${profile.display_name || profile.username}'s Getlnk`}
         />
         <meta
           property="og:title"

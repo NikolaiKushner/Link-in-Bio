@@ -1,4 +1,4 @@
-# LinkHub - Status Dashboard 📊
+# Getlnk - Status Dashboard 📊
 
 **Last Updated:** January 22, 2026 **Overall Progress:** ████████████░░░░░ 85%
 

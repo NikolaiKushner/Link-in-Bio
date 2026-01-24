@@ -9,7 +9,7 @@ export default define.page(function Login(ctx) {
   return (
     <>
       <Head>
-        <title>Login - Fresh Project</title>
+        <title>Login - Getlnk</title>
       </Head>
       <div class="min-h-screen bg-gray-50 flex items-center justify-center px-4 py-12">
         <LoginForm supabaseUrl={config.url} supabaseAnonKey={config.anonKey} />

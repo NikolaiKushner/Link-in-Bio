@@ -1,4 +1,4 @@
-# LinkHub - Your Link-in-Bio Page
+# Getlnk — One link. Every you.
 
 Create a beautiful, shareable landing page with all your links in one place.
 
@@ -7,15 +7,15 @@ Create a beautiful, shareable landing page with all your links in one place.
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Status](https://img.shields.io/badge/status-MVP%20Development-yellow.svg)
 
-## What is LinkHub?
+## What is Getlnk?
 
-LinkHub is an **open-source** link-in-bio platform that lets you create a
+Getlnk is an **open-source** link-in-bio platform that lets you create a
 single, shareable landing page with all your links. Unlike proprietary
 alternatives (Linktree, etc.), you own your data and can self-host for free.
 
-**Example:** `yourdomain.com/@yourname`
+**Example:** `getlnk.xyz/@yourname`
 
-### Why LinkHub?
+### Why Getlnk?
 
 - 🔓 **Open Source** - Own your data, customize everything
 - 💰 **Affordable** - Free tier, Pro at $5/mo (coming soon)
@@ -74,7 +74,7 @@ Visit `http://localhost:5173` and create your page!
 
 ## Self-Hosted & Open Source
 
-Unlike other link-in-bio tools, LinkHub is **100% open source**. Host it
+Unlike other link-in-bio tools, Getlnk is **100% open source**. Host it
 yourself, customize it, and own your data.
 
 ### For Developers
@@ -136,4 +136,4 @@ MIT - Use it however you want. See [LICENSE](./LICENSE) for details.
 
 **Made with ❤️ using Deno Fresh**
 
-_Building the best open-source link-in-bio platform_
+_The open-source link-in-bio_

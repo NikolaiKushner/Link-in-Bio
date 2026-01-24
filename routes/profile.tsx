@@ -18,7 +18,7 @@ export default define.page(async function Profile(ctx) {
   return (
     <>
       <Head>
-        <title>Profile - Fresh Project</title>
+        <title>Profile - Getlnk</title>
       </Head>
       <div class="min-h-screen bg-gray-50">
         {/* Header */}

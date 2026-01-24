@@ -9,7 +9,7 @@ export default define.page(function ForgotPassword(ctx) {
   return (
     <>
       <Head>
-        <title>Forgot Password - Fresh Project</title>
+        <title>Forgot Password - Getlnk</title>
       </Head>
       <div class="min-h-screen bg-gray-50 flex items-center justify-center px-4 py-12">
         <ForgotPasswordForm

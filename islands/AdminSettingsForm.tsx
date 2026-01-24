@@ -9,8 +9,8 @@ import {
 
 export default function AdminSettingsForm() {
   // General Settings
-  const siteName = useSignal("Fresh Project");
-  const siteDescription = useSignal("A modern web application");
+  const siteName = useSignal("Getlnk");
+  const siteDescription = useSignal("One link. Every you. The open-source link-in-bio.");
   const maintenanceMode = useSignal(false);
   const allowRegistrations = useSignal(true);
   const requireEmailVerification = useSignal(false);

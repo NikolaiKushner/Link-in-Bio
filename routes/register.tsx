@@ -9,7 +9,7 @@ export default define.page(function Register(ctx) {
   return (
     <>
       <Head>
-        <title>Register - Fresh Project</title>
+        <title>Register - Getlnk</title>
       </Head>
       <div class="min-h-screen bg-gray-50 flex items-center justify-center px-4 py-12">
         <RegisterForm

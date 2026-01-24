@@ -1,4 +1,4 @@
-# LinkHub - Project Summary
+# Getlnk - Project Summary
 
 **Date:** January 22, 2026 **Version:** Pre-launch MVP **Status:** 🟢 85%
 Complete, Ready for Final Push
@@ -7,7 +7,7 @@ Complete, Ready for Final Push
 
 ## 📊 Executive Summary
 
-LinkHub is an **open-source link-in-bio platform** built with Deno Fresh and
+Getlnk is an **open-source link-in-bio platform** built with Deno Fresh and
 Supabase. The core product is **85% complete** and ready for the final MVP
 polish phase before launch.
 
@@ -116,7 +116,7 @@ polish phase before launch.
 
 ## 🎨 Product Positioning
 
-**Tagline:** _"The open-source link-in-bio for creators who value ownership"_
+**Tagline:** _"The open-source link-in-bio"_
 
 **Value Propositions:**
 

@@ -16,7 +16,7 @@ export default define.page(async function Settings(ctx) {
   return (
     <>
       <Head>
-        <title>Settings - Fresh Project</title>
+        <title>Settings - Getlnk</title>
       </Head>
       <div class="min-h-screen bg-gray-50">
         {/* Header */}

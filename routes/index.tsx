@@ -7,7 +7,7 @@ export default define.page(function Home(ctx) {
   return (
     <>
       <Head>
-        <title>Welcome - Fresh Project</title>
+        <title>Getlnk — One link. Every you.</title>
       </Head>
       <div class="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
         {/* Header */}
@@ -20,7 +20,7 @@ export default define.page(function Home(ctx) {
                 height="40"
                 alt="Fresh logo"
               />
-              <span class="text-xl font-bold text-gray-900">Fresh Project</span>
+              <span class="text-xl font-bold text-gray-900">Getlnk</span>
             </div>
             <div class="flex gap-3">
               {isAuthenticated
@@ -70,14 +70,14 @@ export default define.page(function Home(ctx) {
         <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div class="text-center max-w-3xl mx-auto">
             <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              Welcome to Your{" "}
+              Getlnk —{" "}
               <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">
-                Fresh Project
+                One link. Every you.
               </span>
             </h1>
             <p class="text-xl text-gray-600 mb-8">
-              A modern web application with powerful authentication, user
-              management, and role-based access control powered by Supabase.
+              The open-source link-in-bio platform. Create a beautiful, shareable
+              landing page with all your links in one place.
             </p>
 
             {isAuthenticated
@@ -97,7 +97,7 @@ export default define.page(function Home(ctx) {
                     href="/register"
                     class="px-8 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors font-semibold text-lg"
                   >
-                    Get Started
+                    Get your Getlnk
                   </a>
                   <a
                     href="/login"
@@ -112,35 +112,35 @@ export default define.page(function Home(ctx) {
           {/* Features */}
           <div class="mt-24 grid grid-cols-1 md:grid-cols-3 gap-8">
             <div class="bg-white rounded-lg shadow-lg p-6">
-              <div class="text-4xl mb-4">🔐</div>
+              <div class="text-4xl mb-4">🔓</div>
               <h3 class="text-xl font-bold text-gray-900 mb-2">
-                Secure Authentication
+                Open Source
               </h3>
               <p class="text-gray-600">
-                Email/password and Google OAuth integration with secure session
-                management and HTTP-only cookies.
+                Own your data, customize everything. Host it yourself or use our
+                hosted version. 100% open source.
               </p>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-              <div class="text-4xl mb-4">👥</div>
+              <div class="text-4xl mb-4">🎨</div>
               <h3 class="text-xl font-bold text-gray-900 mb-2">
-                User Management
+                Beautiful Themes
               </h3>
               <p class="text-gray-600">
-                Comprehensive user profiles with role-based access control for
-                regular users and superadmins.
+                Choose from multiple stunning themes to match your brand. Customize
+                colors, fonts, and layouts.
               </p>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-6">
-              <div class="text-4xl mb-4">⚡</div>
+              <div class="text-4xl mb-4">📊</div>
               <h3 class="text-xl font-bold text-gray-900 mb-2">
-                Modern Stack
+                Analytics Built-in
               </h3>
               <p class="text-gray-600">
-                Built with Deno Fresh, Supabase, and Tailwind CSS for a fast,
-                secure, and beautiful experience.
+                Track views and clicks to see which links perform best. Monitor
+                your profile's reach with built-in analytics.
               </p>
             </div>
           </div>
@@ -168,9 +168,9 @@ export default define.page(function Home(ctx) {
         </main>
 
         {/* Footer */}
-        <footer class="bg-white/80 backdrop-blur-sm border-t border-gray-200 mt-20">
+          <footer class="bg-white/80 backdrop-blur-sm border-t border-gray-200 mt-20">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-gray-600">
-            <p>Built with Fresh and Supabase</p>
+            <p>The open-source link-in-bio</p>
           </div>
         </footer>
       </div>

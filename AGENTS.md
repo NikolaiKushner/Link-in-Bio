@@ -6,7 +6,7 @@ otherwise.
 
 ## Project Overview
 
-**LinkHub** is an open-source link-in-bio platform built with:
+**Getlnk** is an open-source link-in-bio platform built with:
 
 - **Runtime:** Deno
 - **Framework:** Fresh 2.x (file-based routing, islands architecture)

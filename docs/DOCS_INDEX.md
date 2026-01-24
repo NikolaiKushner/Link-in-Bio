@@ -1,4 +1,4 @@
-# LinkHub Documentation Index
+# Getlnk Documentation Index
 
 **Quick Navigation:** Your guide to all project documentation
 
@@ -180,7 +180,7 @@ Fixes + Documentation
 ## 🗂️ File Structure Quick Reference
 
 ```
-linkhub/
+getlnk/
 ├── 📄 Documentation (Start Here)
 │   ├── README.md ⭐ Start here
 │   ├── PROJECT_SUMMARY.md ⭐ High-level overview
@@ -374,16 +374,15 @@ Are you new to the project?
 
 ### For Users (Post-Launch)
 
-- **Support:** support@linkhub.com (setup later)
-- **Documentation:** docs.linkhub.com (create later)
+- **Support:** support@getlnk.xyz (setup later)
+- **Documentation:** docs.getlnk.xyz (create later)
 - **Community:** Discord server (create later)
 
 ---
 
 ## 🎯 Mission Statement
 
-> "Build the best open-source link-in-bio platform. Empower creators with
-> ownership, privacy, and affordability."
+> "One link. Every you. The open-source link-in-bio platform."
 
 **Core Values:**
 
