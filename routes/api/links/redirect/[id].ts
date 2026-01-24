@@ -3,7 +3,7 @@ import { supabase } from "../../../../lib/supabase.ts";
 
 // GET /api/links/redirect/:id?url=... - Track click and redirect
 export const handler = define.handlers({
-  async GET(ctx) {
+  GET(ctx) {
     try {
       const linkId = ctx.params.id;
       const url = new URL(ctx.req.url);

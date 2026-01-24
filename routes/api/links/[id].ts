@@ -1,6 +1,7 @@
 import { define } from "../../../utils.ts";
 import { getSession } from "../../../lib/auth.ts";
 import { createSupabaseClient } from "../../../lib/supabase.ts";
+import type { LinkUpdate } from "../../../lib/database.types.ts";
 
 export const handler = define.handlers({
   // PUT /api/links/:id - Update a link
@@ -39,7 +40,7 @@ export const handler = define.handlers({
       const supabase = createSupabaseClient(session.accessToken);
 
       // Build update object with only provided fields
-      const updateData: Record<string, unknown> = {};
+      const updateData: LinkUpdate = {};
       if (title !== undefined) updateData.title = title;
       if (url !== undefined) updateData.url = url;
       if (icon !== undefined) updateData.icon = icon;
@@ -47,7 +48,7 @@ export const handler = define.handlers({
 
       const { data: link, error } = await supabase
         .from("links")
-        .update(updateData)
+        .update(updateData as never)
         .eq("id", linkId)
         .eq("user_id", session.user.id)
         .select()

@@ -1,11 +1,5 @@
 import { useSignal } from "@preact/signals";
-import {
-  Button,
-  Checkbox,
-  Input,
-  Select,
-  Textarea,
-} from "../components/ui/index.ts";
+import { Button, Checkbox, Input, Textarea } from "../components/ui/index.ts";
 
 export default function AdminSettingsForm() {
   // General Settings

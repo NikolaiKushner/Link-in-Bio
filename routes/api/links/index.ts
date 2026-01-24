@@ -1,6 +1,7 @@
 import { define } from "../../../utils.ts";
 import { getSession } from "../../../lib/auth.ts";
 import { createSupabaseClient } from "../../../lib/supabase.ts";
+import type { Link, LinkInsert } from "../../../lib/database.types.ts";
 
 // GET /api/links - Get all links for the current user
 export const handler = define.handlers({
@@ -107,19 +108,22 @@ export const handler = define.handlers({
         .order("position", { ascending: false })
         .limit(1);
 
-      const nextPosition = existingLinks && existingLinks.length > 0
-        ? existingLinks[0].position + 1
+      const typedLinks = existingLinks as Link[] | null;
+      const nextPosition = typedLinks && typedLinks.length > 0
+        ? typedLinks[0].position + 1
         : 0;
+
+      const insertData: LinkInsert = {
+        user_id: session.user.id,
+        title,
+        url,
+        icon: icon || null,
+        position: nextPosition,
+      };
 
       const { data: link, error } = await supabase
         .from("links")
-        .insert({
-          user_id: session.user.id,
-          title,
-          url,
-          icon: icon || null,
-          position: nextPosition,
-        })
+        .insert(insertData as never)
         .select()
         .single();
 

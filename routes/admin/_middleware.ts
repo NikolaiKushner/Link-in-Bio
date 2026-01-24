@@ -1,7 +1,7 @@
 import { define } from "../../utils.ts";
 import { isSuperAdmin } from "../../lib/auth.ts";
 
-export default define.middleware(async (ctx) => {
+export default define.middleware((ctx) => {
   // Check if user is authenticated (done by parent middleware)
   if (!ctx.state.authUser) {
     return new Response("", {

@@ -3,7 +3,7 @@ import { Head } from "fresh/runtime";
 import { getAuthUser, isSuperAdmin } from "../lib/auth.ts";
 import type { AuthUser } from "../lib/auth.ts";
 import { createSupabaseClient } from "../lib/supabase.ts";
-import type { Link } from "../lib/database.types.ts";
+import type { Link, PublicProfile } from "../lib/database.types.ts";
 
 export default define.page(async function Dashboard(ctx) {
   const authUser = await getAuthUser(ctx.req) as AuthUser | null;
@@ -19,11 +19,15 @@ export default define.page(async function Dashboard(ctx) {
   const isAdmin = isSuperAdmin(profile);
 
   const supabase = createSupabaseClient(session.accessToken);
-  const { data: publicProfile } = await supabase
+  const { data: publicProfileData } = await supabase
     .from("public_profiles")
     .select("username, page_views, is_published")
     .eq("user_id", user.id)
     .single();
+
+  const publicProfile = publicProfileData as
+    | Pick<PublicProfile, "username" | "page_views" | "is_published">
+    | null;
 
   const { data: links } = await supabase
     .from("links")

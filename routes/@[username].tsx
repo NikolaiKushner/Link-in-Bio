@@ -1,11 +1,7 @@
 import { define } from "../utils.ts";
 import { Head } from "fresh/runtime";
 import { supabase } from "../lib/supabase.ts";
-import type {
-  Link,
-  ProfileTheme,
-  PublicProfile,
-} from "../lib/database.types.ts";
+import type { ProfileTheme, PublicProfile } from "../lib/database.types.ts";
 
 interface PublicLink {
   id: string;

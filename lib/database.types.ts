@@ -163,7 +163,14 @@ export interface Database {
       [_ in never]: never;
     };
     Functions: {
-      [_ in never]: never;
+      increment_link_clicks: {
+        Args: { link_id: string };
+        Returns: void;
+      };
+      increment_page_views: {
+        Args: { profile_id: string };
+        Returns: void;
+      };
     };
     Enums: {
       user_role: "regular" | "superadmin";

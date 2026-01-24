@@ -3,7 +3,7 @@ import { Head } from "fresh/runtime";
 import { getSupabaseConfig } from "../lib/supabase.ts";
 import LoginForm from "../islands/LoginForm.tsx";
 
-export default define.page(function Login(ctx) {
+export default define.page(function Login(_ctx) {
   const config = getSupabaseConfig();
 
   return (

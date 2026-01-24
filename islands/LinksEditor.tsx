@@ -661,6 +661,7 @@ export default function LinksEditor(
                         {/* Reorder buttons */}
                         <div class="flex flex-col gap-1">
                           <button
+                            type="button"
                             onClick={() => moveLink(index, "up")}
                             disabled={index === 0}
                             class="p-1 text-gray-400 hover:text-gray-600 disabled:opacity-30"
@@ -668,6 +669,7 @@ export default function LinksEditor(
                             ▲
                           </button>
                           <button
+                            type="button"
                             onClick={() => moveLink(index, "down")}
                             disabled={index === links.value.length - 1}
                             class="p-1 text-gray-400 hover:text-gray-600 disabled:opacity-30"
@@ -692,6 +694,7 @@ export default function LinksEditor(
                         {/* Actions */}
                         <div class="flex items-center gap-2">
                           <button
+                            type="button"
                             onClick={() => toggleLinkActive(link)}
                             class={`p-2 rounded ${
                               link.is_active
@@ -703,6 +706,7 @@ export default function LinksEditor(
                             {link.is_active ? "●" : "○"}
                           </button>
                           <button
+                            type="button"
                             onClick={() => startEditing(link)}
                             class="p-2 text-gray-400 hover:text-gray-600"
                             title="Edit"
@@ -710,6 +714,7 @@ export default function LinksEditor(
                             ✎
                           </button>
                           <button
+                            type="button"
                             onClick={() => deleteLink(link.id)}
                             class="p-2 text-gray-400 hover:text-red-600"
                             title="Delete"

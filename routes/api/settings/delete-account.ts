@@ -41,7 +41,7 @@ export const handler = define.handlers({
 
       // Delete user account using admin client
       // Note: This will cascade delete the user profile due to ON DELETE CASCADE
-      const { data, error } = await adminSupabase.auth.admin.deleteUser(
+      const { data: _data, error } = await adminSupabase.auth.admin.deleteUser(
         session.user.id,
       );
 

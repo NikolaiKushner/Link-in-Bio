@@ -201,8 +201,9 @@ export default function LoginForm(
             fullWidth
             loading={loading.value}
             class="mt-6"
-            children={loading.value ? "Signing in..." : "Continue with email"}
-          />
+          >
+            {loading.value ? "Signing in..." : "Continue with email"}
+          </Button>
         </form>
       </div>
 

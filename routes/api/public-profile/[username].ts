@@ -1,5 +1,6 @@
 import { define } from "../../../utils.ts";
 import { createAdminSupabaseClient } from "../../../lib/supabase.ts";
+import type { PublicProfile } from "../../../lib/database.types.ts";
 
 // GET /api/public-profile/:username - Get a public profile by username (public endpoint)
 export const handler = define.handlers({
@@ -28,7 +29,9 @@ export const handler = define.handlers({
         .eq("is_published", true)
         .single();
 
-      if (profileError || !profile) {
+      const typedProfile = profile as PublicProfile | null;
+
+      if (profileError || !typedProfile) {
         return new Response(
           JSON.stringify({ error: "Profile not found" }),
           {
@@ -42,7 +45,7 @@ export const handler = define.handlers({
       const { data: links, error: linksError } = await supabase
         .from("links")
         .select("id, title, url, icon, position")
-        .eq("user_id", profile.user_id)
+        .eq("user_id", typedProfile.user_id)
         .eq("is_active", true)
         .order("position", { ascending: true });
 
@@ -53,18 +56,18 @@ export const handler = define.handlers({
       // Increment page views (fire and forget)
       supabase
         .from("public_profiles")
-        .update({ page_views: profile.page_views + 1 })
-        .eq("id", profile.id)
+        .update({ page_views: typedProfile.page_views + 1 } as never)
+        .eq("id", typedProfile.id)
         .then(() => {});
 
       return new Response(
         JSON.stringify({
           profile: {
-            username: profile.username,
-            display_name: profile.display_name,
-            bio: profile.bio,
-            avatar_url: profile.avatar_url,
-            theme: profile.theme,
+            username: typedProfile.username,
+            display_name: typedProfile.display_name,
+            bio: typedProfile.bio,
+            avatar_url: typedProfile.avatar_url,
+            theme: typedProfile.theme,
           },
           links: links || [],
         }),

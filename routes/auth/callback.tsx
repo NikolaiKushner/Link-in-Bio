@@ -3,7 +3,7 @@ import { Head } from "fresh/runtime";
 import { getSupabaseConfig } from "../../lib/supabase.ts";
 import AuthCallbackHandler from "../../islands/AuthCallbackHandler.tsx";
 
-export default define.page(function AuthCallback(ctx) {
+export default define.page(function AuthCallback(_ctx) {
   const config = getSupabaseConfig();
 
   return (

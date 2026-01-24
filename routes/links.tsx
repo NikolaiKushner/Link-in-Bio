@@ -18,11 +18,13 @@ export default define.page(async function LinksPage(ctx) {
   const supabase = createSupabaseClient(authUser.session.accessToken);
 
   // Fetch user's public profile
-  const { data: profile } = await supabase
+  const { data: profileData } = await supabase
     .from("public_profiles")
     .select("*")
     .eq("user_id", authUser.user.id)
     .single();
+
+  const profile = profileData as PublicProfile | null;
 
   // Fetch user's links
   const { data: links } = await supabase

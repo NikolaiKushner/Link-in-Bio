@@ -1,6 +1,6 @@
 import { define } from "../../../utils.ts";
 import { getAuthUser } from "../../../lib/auth.ts";
-import { createSupabaseClient, supabase } from "../../../lib/supabase.ts";
+import { createSupabaseClient } from "../../../lib/supabase.ts";
 
 export const handler = define.handlers({
   async POST(ctx) {
@@ -65,7 +65,7 @@ export const handler = define.handlers({
       // Upload to Supabase Storage
       // Note: You need to create a "avatars" bucket in Supabase Storage first
       // with public access enabled
-      const { data: uploadData, error: uploadError } = await userSupabase
+      const { data: _uploadData, error: uploadError } = await userSupabase
         .storage
         .from("avatars")
         .upload(filePath, fileBuffer, {
@@ -94,7 +94,7 @@ export const handler = define.handlers({
       // Update user's public profile with new avatar URL
       const { error: updateError } = await userSupabase
         .from("public_profiles")
-        .update({ avatar_url: avatarUrl } as any)
+        .update({ avatar_url: avatarUrl } as never)
         .eq("user_id", user.id);
 
       if (updateError) {

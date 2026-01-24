@@ -1,7 +1,11 @@
 import { define } from "../../../utils.ts";
 import { getSession } from "../../../lib/auth.ts";
 import { createSupabaseClient } from "../../../lib/supabase.ts";
-import type { ProfileTheme } from "../../../lib/database.types.ts";
+import type {
+  ProfileTheme,
+  PublicProfileInsert,
+  PublicProfileUpdate,
+} from "../../../lib/database.types.ts";
 
 // GET /api/public-profile - Get current user's public profile
 // POST /api/public-profile - Create or update public profile
@@ -147,7 +151,7 @@ export const handler = define.handlers({
 
       if (existingProfile) {
         // Update existing profile
-        const updateData: Record<string, unknown> = {};
+        const updateData: PublicProfileUpdate = {};
         if (username !== undefined) updateData.username = username;
         if (display_name !== undefined) updateData.display_name = display_name;
         if (bio !== undefined) updateData.bio = bio;
@@ -157,7 +161,7 @@ export const handler = define.handlers({
 
         const { data: profile, error } = await supabase
           .from("public_profiles")
-          .update(updateData)
+          .update(updateData as never)
           .eq("user_id", session.user.id)
           .select()
           .single();
@@ -204,17 +208,19 @@ export const handler = define.handlers({
           );
         }
 
+        const insertData: PublicProfileInsert = {
+          user_id: session.user.id,
+          username,
+          display_name: display_name || null,
+          bio: bio || null,
+          avatar_url: avatar_url || null,
+          theme: theme || "default",
+          is_published: is_published || false,
+        };
+
         const { data: profile, error } = await supabase
           .from("public_profiles")
-          .insert({
-            user_id: session.user.id,
-            username,
-            display_name: display_name || null,
-            bio: bio || null,
-            avatar_url: avatar_url || null,
-            theme: theme || "default",
-            is_published: is_published || false,
-          })
+          .insert(insertData as never)
           .select()
           .single();
 

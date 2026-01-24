@@ -3,7 +3,7 @@ import { Head } from "fresh/runtime";
 import { getSupabaseConfig } from "../lib/supabase.ts";
 import ForgotPasswordForm from "../islands/ForgotPasswordForm.tsx";
 
-export default define.page(function ForgotPassword(ctx) {
+export default define.page(function ForgotPassword(_ctx) {
   const config = getSupabaseConfig();
 
   return (
