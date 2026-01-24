@@ -82,7 +82,8 @@
 - Authentication configuration
 - Testing checklist
 
-**[LINKINBIO_SETUP.sql](../sql/LINKINBIO_SETUP.sql)** - Database migration script
+**[LINKINBIO_SETUP.sql](../sql/LINKINBIO_SETUP.sql)** - Database migration
+script
 
 - Table definitions
 - Indexes

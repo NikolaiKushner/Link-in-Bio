@@ -76,8 +76,8 @@ export default define.page(function Home(ctx) {
               </span>
             </h1>
             <p class="text-xl text-gray-600 mb-8">
-              The open-source link-in-bio platform. Create a beautiful, shareable
-              landing page with all your links in one place.
+              The open-source link-in-bio platform. Create a beautiful,
+              shareable landing page with all your links in one place.
             </p>
 
             {isAuthenticated
@@ -128,8 +128,8 @@ export default define.page(function Home(ctx) {
                 Beautiful Themes
               </h3>
               <p class="text-gray-600">
-                Choose from multiple stunning themes to match your brand. Customize
-                colors, fonts, and layouts.
+                Choose from multiple stunning themes to match your brand.
+                Customize colors, fonts, and layouts.
               </p>
             </div>
 
@@ -168,7 +168,7 @@ export default define.page(function Home(ctx) {
         </main>
 
         {/* Footer */}
-          <footer class="bg-white/80 backdrop-blur-sm border-t border-gray-200 mt-20">
+        <footer class="bg-white/80 backdrop-blur-sm border-t border-gray-200 mt-20">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-gray-600">
             <p>The open-source link-in-bio</p>
           </div>

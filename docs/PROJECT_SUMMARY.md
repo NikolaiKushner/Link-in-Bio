@@ -268,7 +268,7 @@ polish phase before launch.
 | `QUICK_START.md`          | Immediate action items, this week's tasks |
 | `product_strategy.md`     | Original vision, market analysis          |
 | `DATABASE_SETUP.md`       | Database schema, setup guide              |
-| `sql/LINKINBIO_SETUP.sql`     | Database migration script                 |
+| `sql/LINKINBIO_SETUP.sql` | Database migration script                 |
 | `SECURITY_REFACTORING.md` | Security architecture                     |
 | `PROJECT_SUMMARY.md`      | This document - quick reference           |
 

@@ -10,7 +10,9 @@ import {
 export default function AdminSettingsForm() {
   // General Settings
   const siteName = useSignal("Getlnk");
-  const siteDescription = useSignal("One link. Every you. The open-source link-in-bio.");
+  const siteDescription = useSignal(
+    "One link. Every you. The open-source link-in-bio.",
+  );
   const maintenanceMode = useSignal(false);
   const allowRegistrations = useSignal(true);
   const requireEmailVerification = useSignal(false);

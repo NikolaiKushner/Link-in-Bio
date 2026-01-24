@@ -32,22 +32,27 @@ This checklist ensures your repository is ready to be made public on GitHub.
 After making the repo public, configure these settings:
 
 #### Repository Settings → General
+
 - [ ] **Description**: "Open-source link-in-bio platform built with Deno Fresh"
-- [ ] **Topics**: Add relevant tags (e.g., `deno`, `fresh`, `link-in-bio`, `supabase`, `typescript`)
+- [ ] **Topics**: Add relevant tags (e.g., `deno`, `fresh`, `link-in-bio`,
+      `supabase`, `typescript`)
 - [ ] **Website**: Add your production URL (if available)
 - [ ] **Enable Discussions**: Yes (for community engagement)
 - [ ] **Enable Issues**: Yes
 - [ ] **Enable Wiki**: Optional (you have docs/ folder)
 
 #### Repository Settings → Security
+
 - [ ] **Enable Dependabot alerts**: Yes
 - [ ] **Enable Dependabot security updates**: Yes
 - [ ] **Enable secret scanning**: Yes (GitHub will scan for exposed secrets)
 
 #### Repository Settings → Actions
+
 - [ ] **Enable GitHub Actions**: Yes (if you plan to add CI/CD)
 
 #### Repository Settings → Pages
+
 - [ ] **Enable GitHub Pages**: Optional (for documentation site)
 
 ### 5. GitHub Features to Enable
@@ -82,7 +87,8 @@ After making the repo public, configure these settings:
 
 ### Before Going Public
 
-1. **Rotate all API keys** after making public (if they were ever in git history)
+1. **Rotate all API keys** after making public (if they were ever in git
+   history)
 2. **Review git history** for any committed secrets:
    ```bash
    git log --all --full-history --source -- "*env*" "*secret*" "*key*"

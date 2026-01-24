@@ -9,9 +9,9 @@ Create a beautiful, shareable landing page with all your links in one place.
 
 ## What is Getlnk?
 
-Getlnk is an **open-source** link-in-bio platform that lets you create a
-single, shareable landing page with all your links. Unlike proprietary
-alternatives (Linktree, etc.), you own your data and can self-host for free.
+Getlnk is an **open-source** link-in-bio platform that lets you create a single,
+shareable landing page with all your links. Unlike proprietary alternatives
+(Linktree, etc.), you own your data and can self-host for free.
 
 **Example:** `getlnk.xyz/@yourname`
 

@@ -221,3 +221,10 @@ Required environment variables (set in `.env`):
 - `MVP_ROADMAP.md` — Feature roadmap and priorities
 - `COMPONENTS.md` — UI component documentation
 - `SECURITY_REFACTORING.md` — Security architecture
+
+### Documentation File Naming Rules
+
+- **Do NOT create files with `*_REPORT.md` or `*_FIX.md` naming patterns.**
+- These patterns are reserved and should not be used for documentation files.
+- Use descriptive names that match existing documentation patterns (e.g.,
+  `SETUP.md`, `GUIDE.md`, `ARCHITECTURE.md`).

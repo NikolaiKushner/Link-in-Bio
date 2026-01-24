@@ -336,7 +336,7 @@ Regular Links Below
 
 | Tier         | Price  | Features                                                                                                                              |
 | ------------ | ------ | ------------------------------------------------------------------------------------------------------------------------------------- |
-| **Free**     | $0/mo  | • 5 links<br>• Basic themes<br>• Basic analytics<br>• Getlnk branding                                                                |
+| **Free**     | $0/mo  | • 5 links<br>• Basic themes<br>• Basic analytics<br>• Getlnk branding                                                                 |
 | **Pro**      | $5/mo  | • Unlimited links<br>• All themes<br>• Advanced analytics<br>• Social icons<br>• No branding<br>• Email support                       |
 | **Business** | $15/mo | • Everything in Pro<br>• Custom domain<br>• Email capture widget<br>• Priority support<br>• Link scheduling<br>• Team access (future) |
 

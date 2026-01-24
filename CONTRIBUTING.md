@@ -1,16 +1,19 @@
 # Contributing to Getlnk
 
-Thank you for your interest in contributing to Getlnk! This document provides guidelines and instructions for contributing.
+Thank you for your interest in contributing to Getlnk! This document provides
+guidelines and instructions for contributing.
 
 ## Code of Conduct
 
-By participating in this project, you agree to maintain a respectful and inclusive environment for everyone.
+By participating in this project, you agree to maintain a respectful and
+inclusive environment for everyone.
 
 ## How to Contribute
 
 ### Reporting Bugs
 
-1. Check if the bug has already been reported in [Issues](https://github.com/NikolaiKushner/linkhub/issues)
+1. Check if the bug has already been reported in
+   [Issues](https://github.com/NikolaiKushner/linkhub/issues)
 2. If not, create a new issue with:
    - Clear title and description
    - Steps to reproduce
@@ -20,7 +23,8 @@ By participating in this project, you agree to maintain a respectful and inclusi
 
 ### Suggesting Features
 
-1. Check [Issues](https://github.com/NikolaiKushner/linkhub/issues) and [Discussions](https://github.com/NikolaiKushner/linkhub/discussions) first
+1. Check [Issues](https://github.com/NikolaiKushner/linkhub/issues) and
+   [Discussions](https://github.com/NikolaiKushner/linkhub/discussions) first
 2. Open a new issue or discussion with:
    - Clear description of the feature
    - Use case and benefits
@@ -73,6 +77,7 @@ deno task check
 ```
 
 This runs:
+
 - `deno fmt --check` - Formatting check
 - `deno lint` - Linting
 - `deno check` - Type checking
@@ -109,10 +114,12 @@ See [MVP_ROADMAP.md](./docs/MVP_ROADMAP.md) for the full roadmap.
 
 ## Questions?
 
-- Open a [Discussion](https://github.com/NikolaiKushner/linkhub/discussions) for questions
+- Open a [Discussion](https://github.com/NikolaiKushner/linkhub/discussions) for
+  questions
 - Check existing [Documentation](./docs/) for guides
 - Review [AGENTS.md](./AGENTS.md) for development guidelines
 
 ## License
 
-By contributing, you agree that your contributions will be licensed under the MIT License.
+By contributing, you agree that your contributions will be licensed under the
+MIT License.
