@@ -82,7 +82,7 @@
 - Authentication configuration
 - Testing checklist
 
-**[LINKINBIO_SETUP.sql](./LINKINBIO_SETUP.sql)** - Database migration script
+**[LINKINBIO_SETUP.sql](../sql/LINKINBIO_SETUP.sql)** - Database migration script
 
 - Table definitions
 - Indexes
@@ -190,7 +190,7 @@ getlnk/
 │   ├── product_strategy.md 🎯 Strategy
 │   ├── DATABASE_SETUP.md 🗄️ Database docs
 │   ├── SECURITY_REFACTORING.md 🔒 Security
-│   ├── LINKINBIO_SETUP.sql 💾 Database schema
+│   ├── sql/LINKINBIO_SETUP.sql 💾 Database schema
 │   ├── LICENSE 📜 MIT License
 │   └── DOCS_INDEX.md 📚 This file
 │
@@ -262,7 +262,7 @@ section
 This Week section
 
 **...understand the database schema?** → See
-[LINKINBIO_SETUP.sql](./LINKINBIO_SETUP.sql) or
+[sql/LINKINBIO_SETUP.sql](../sql/LINKINBIO_SETUP.sql) or
 [DATABASE_SETUP.md](./DATABASE_SETUP.md)
 
 **...implement Stripe payments?** → See [MVP_ROADMAP.md](./MVP_ROADMAP.md) -

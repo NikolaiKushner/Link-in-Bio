@@ -47,7 +47,7 @@ export const handler = async (req: Request): Promise<Response> => {
 
 **Steps:**
 
-1. Add migration to `LINKINBIO_SETUP.sql`:
+1. Add migration to `sql/LINKINBIO_SETUP.sql`:
    ```sql
    ALTER TABLE public_profiles
    ADD COLUMN social_links JSONB DEFAULT '{}'::jsonb;
@@ -313,7 +313,7 @@ cp .env.example .env
 # Add your Supabase credentials
 
 # 4. Set up Supabase database
-# Copy LINKINBIO_SETUP.sql into Supabase SQL Editor and run
+# Copy sql/LINKINBIO_SETUP.sql into Supabase SQL Editor and run
 
 # 5. Start dev server
 deno task dev
@@ -495,7 +495,7 @@ git push origin main
 - `MVP_ROADMAP.md` - Full roadmap (this summary's source)
 - `product_strategy.md` - Original strategy doc
 - `DATABASE_SETUP.md` - Database setup guide
-- `LINKINBIO_SETUP.sql` - Database schema
+- `sql/LINKINBIO_SETUP.sql` - Database schema
 - `SECURITY_REFACTORING.md` - Security changes made
 
 ---

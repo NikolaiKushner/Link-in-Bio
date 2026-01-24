@@ -58,7 +58,7 @@ cp .env.example .env
 # Add your Supabase credentials to .env
 
 # Run the database setup
-# Copy LINKINBIO_SETUP.sql into Supabase SQL Editor
+# Copy sql/LINKINBIO_SETUP.sql into Supabase SQL Editor
 
 # Start the app
 deno task dev

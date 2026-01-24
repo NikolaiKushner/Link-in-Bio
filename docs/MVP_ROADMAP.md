@@ -112,7 +112,7 @@ analytics) is **already implemented**. This roadmap focuses on:
 
 **Files to modify:**
 
-- `LINKINBIO_SETUP.sql` - Add migration
+- `sql/LINKINBIO_SETUP.sql` - Add migration
 - `lib/database.types.ts` - Add type
 - `islands/LinksEditor.tsx` - Add social links editor
 - `routes/@[username].tsx` - Display social icons
