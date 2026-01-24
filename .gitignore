@@ -1,8 +1,12 @@
 # macOS system files
 .DS_Store
+.AppleDouble
+.LSOverride
 
 # dotenv environment variable files
 .env
+.env.*
+!.env.example
 .env.development.local
 .env.test.local
 .env.production.local
@@ -10,6 +14,10 @@
 
 # IDEs
 .idea/
+.vscode/
+*.swp
+*.swo
+*~
 
 # Fresh build directory
 _fresh/
@@ -17,5 +25,14 @@ _fresh/
 node_modules/
 vendor/
 
+# Logs
+*.log
+logs/
+npm-debug.log*
 
-product_strategy.md
+# OS files
+Thumbs.db
+.DS_Store
+
+# Private files
+docs/product_strategy.md
