@@ -18,7 +18,7 @@ export default define.middleware(async (ctx) => {
   // Check if current path is public
   const isPublicRoute = publicRoutes.some((route) =>
     url.pathname === route || url.pathname.startsWith("/api/auth/")
-  );
+  ) || url.pathname.startsWith("/@"); // Dynamic route: /@[username]
 
   // Static files and assets
   const isStaticFile = url.pathname.startsWith("/static/") ||
